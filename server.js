@@ -57,7 +57,7 @@ app.use(function (req, res, next) {
 
     return next();
   }
-
+// hello
   token = token.replace('Bearer ', '');
   // .env should contain a line like JWT_SECRET=V3RY#1MP0RT@NT$3CR3T#
   jwt.verify(token, process.env.JWT_SECRET, function (err, user) {
