@@ -11,7 +11,7 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
-//hello
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
