@@ -26,9 +26,12 @@ app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-
-const db = require("./models");
+try {
+  const db = require("./models");
 db.sequelize.sync();
+} catch(e)
+{console.log(e)}
+
 
 app.use("/public", express.static("public"));
 
