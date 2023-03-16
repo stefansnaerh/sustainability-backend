@@ -7,6 +7,12 @@ const path = require('path');
 
 const app = express();
 
+// Create GET request
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 var corsOptions = {
